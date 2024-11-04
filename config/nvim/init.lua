@@ -19,9 +19,20 @@ plugins = {
     require 'plugins.telescope',
     require 'plugins.tmuxnavigator',
     require 'plugins.treesitter',
-    require 'plugins.lsp'
+    require 'plugins.lsp',
+    require 'plugins.autocomplete'
 }
-opts = {}
+opts = {
+   performance = {
+    rtp = {
+      reset = false -- I need this because otherwise lazy.nvim reset the runtimepath
+    },
+  } 
+}
 
+--try to force the treesitter to use the right parsers.
 require("lazy").setup(plugins, opts)
+vim.opt.rtp:prepend("~/.local/share/nvim/lazy/nvim-treesitter")
+
+
 
