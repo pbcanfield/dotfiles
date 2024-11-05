@@ -142,8 +142,8 @@ return {
           ['<esc>'] = 'cancel', -- close preview or floating neo-tree window
           ['P'] = { 'toggle_preview', config = { use_float = true } },
           ['l'] = 'open',
-          ['S'] = 'open_split',
-          ['s'] = 'open_vsplit',
+          ['x'] = 'open_split',
+          ['v'] = 'open_vsplit',
           -- ["S"] = "split_with_window_picker",
           -- ["s"] = "vsplit_with_window_picker",
           ['t'] = 'open_tabnew',

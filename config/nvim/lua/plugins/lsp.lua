@@ -152,7 +152,25 @@ return {
     local servers = {
       clangd = {},
       rust_analyzer = {},
-      pylsp = {},
+      pylsp = {
+        settings = {
+          pylsp = {
+            plugins = {
+                -- jedi_completion = {fuzzy = true},
+                -- jedi_completion = {eager=true},
+                jedi_completion = {
+                    include_params = true,
+                },
+
+                jedi_signature_help = {enabled = true},
+                pyflakes={enabled=true},
+                pylsp_mypy={enabled=false},
+                pycodestyle={enabled=false},
+                yapf={enabled=true}
+            },
+          },
+        },
+      },
       --html = { filetypes = { 'html', 'twig', 'hbs' } },
       --dockerls = {},
       --jsonls = {},
