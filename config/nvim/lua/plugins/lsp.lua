@@ -150,12 +150,18 @@ return {
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
+<<<<<<< HEAD
       clangd = {},
       rust_analyzer = {},
+=======
+      --clangd = {},
+      --rust_analyzer = {},
+>>>>>>> f76271d51bbe9b1df0a17dd8387f544356f10689
       pylsp = {
         settings = {
           pylsp = {
             plugins = {
+<<<<<<< HEAD
                 -- jedi_completion = {fuzzy = true},
                 -- jedi_completion = {eager=true},
                 jedi_completion = {
@@ -167,6 +173,16 @@ return {
                 pylsp_mypy={enabled=false},
                 pycodestyle={enabled=false},
                 yapf={enabled=true}
+=======
+              pyflakes = { enabled = false },
+              pycodestyle = { enabled = false },
+              autopep8 = { enabled = false },
+              yapf = { enabled = false },
+              mccabe = { enabled = false },
+              pylsp_mypy = { enabled = false },
+              pylsp_black = { enabled = false },
+              pylsp_isort = { enabled = false },
+>>>>>>> f76271d51bbe9b1df0a17dd8387f544356f10689
             },
           },
         },
@@ -184,10 +200,13 @@ return {
     --
     --  You can press `g?` for help in this menu.
     require('mason').setup()
+<<<<<<< HEAD
       
     local ensure_installed = vim.tbl_keys(servers or {})
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+=======
+>>>>>>> f76271d51bbe9b1df0a17dd8387f544356f10689
     require('mason-lspconfig').setup {
       handlers = {
         function(server_name)

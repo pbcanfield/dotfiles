@@ -22,17 +22,12 @@ plugins = {
     require 'plugins.lsp',
     require 'plugins.autocomplete'
 }
-opts = {
-   performance = {
-    rtp = {
-      reset = false -- I need this because otherwise lazy.nvim reset the runtimepath
-    },
-  } 
+opts = { 
 }
 
 --try to force the treesitter to use the right parsers.
 require("lazy").setup(plugins, opts)
-vim.opt.rtp:prepend("~/.local/share/nvim/lazy/nvim-treesitter")
+
 
 
 
