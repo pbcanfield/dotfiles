@@ -22,12 +22,11 @@ plugins = {
     require 'plugins.lsp',
     require 'plugins.autocomplete'
 }
-opts = { 
+opts = {
 }
 
 --try to force the treesitter to use the right parsers.
 require("lazy").setup(plugins, opts)
-
 
 
 
